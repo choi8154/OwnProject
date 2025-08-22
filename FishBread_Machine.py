@@ -10,14 +10,14 @@
 fish_price = {'단팥' : 2500, '슈크림': 2800, '고구마': 3000}
 
 
- #?수정을 했는데 뭔가 아쉬움. 조건문이 너무 길어. add()함수로 줄일 수 있다고 함.
+ #
 while True:
-    fish_choice = list(input('단팥, 슈크림, 고구마 중 고르시오(공백 문자로 구분) :').split())
+    fish_choice = input('단팥, 슈크림, 고구마 중 고르시오(공백 문자로 구분) :').split()
     if fish_choice == []:
         print('리스트를 입력 하시오')
         continue
     else:
-        if not fish_choice[0] in fish_price.keys() or not fish_choice[1] in fish_price.keys() or not fish_choice[1] in fish_price.keys():
+        if not all(fish in fish_price for fish in fish_choice) :
             print('리스트에서만 고르시오!')
             continue
         else:
