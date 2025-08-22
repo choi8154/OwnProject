@@ -10,7 +10,6 @@
 fish_price = {'단팥' : 2500, '슈크림': 2800, '고구마': 3000}
 
 
- #
 while True:
     fish_choice = input('단팥, 슈크림, 고구마 중 고르시오(공백 문자로 구분) :').split()
     if fish_choice == []:
