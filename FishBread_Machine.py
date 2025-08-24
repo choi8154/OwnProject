@@ -12,15 +12,15 @@ fish_price = {'단팥' : 2500, '슈크림': 2800, '고구마': 3000}
 
 while True:
     fish_choice = input('단팥, 슈크림, 고구마 중 고르시오(공백 문자로 구분) :').split()
-    if fish_choice == []:
-        print('리스트를 입력 하시오')
-        continue
-    else:
+    if fish_choice:
         if not all(fish in fish_price for fish in fish_choice) :
             print('리스트에서만 고르시오!')
             continue
         else:
             break
+    else:
+        print('리스트를 입력 하시오')
+        continue
 
 #붕어빵 별 개수 입력.
 fish_ea = []
@@ -41,7 +41,9 @@ for fish, fish_num in fish_ea:
 
 #붕어빵 가격 모두 더하기
 all_price = sum(fish_all)
- #?붕어빵 종류별로 개수와 가격이 출력되도록.
+
+
+
 #붕어빵 결과 출력
 print(f'총 {all_num}개로 {all_price}원 입니다.')
 
