@@ -33,7 +33,7 @@ for fish in fish_choice:
 #붕어빵 가격 연산하기, 붕어빵 총 개수 연산하기
 fish_all=[]
 all_num = 0
-
+ 
 for fish, fish_num in fish_ea:
     fish_pc = fish_price[fish]
     fish_all.append(fish_pc * fish_num)
