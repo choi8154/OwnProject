@@ -14,6 +14,6 @@ while True :
 for i in range(30):
     time.sleep(random.random())
     print('=', end='', flush=True) #GPT 제안 : print('\r[' + '='*(i+1) + ' '*(30-i-1) + ']', end='', flush=True)
-print('로딩 종료')
+print('로딩 완료')
 
 #GTP 제안 해석 : 문자 '='가 지정해놓은 공백에 루프마다 쌓이면서 출력.
